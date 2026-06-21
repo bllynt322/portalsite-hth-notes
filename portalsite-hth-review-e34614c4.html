@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于华体会 · 稳定服务与页面说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fafbfc;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            color: #1e2a3a;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 680px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* 极简标题层级 */
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #0b1a2b;
+            margin-bottom: 0.25rem;
+            line-height: 1.3;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #1f2e40;
+            margin-top: 2.8rem;
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid #e5e9ef;
+            padding-bottom: 0.4rem;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: #2a3a4e;
+            margin-top: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1.3rem;
+            font-size: 1rem;
+            color: #2e3b4c;
+        }
+
+        /* 开场短句：留白 + 轻量装饰 */
+        .hero-sub {
+            font-size: 0.9rem;
+            color: #6b7b8e;
+            letter-spacing: 0.02em;
+            margin-top: -0.2rem;
+            margin-bottom: 2.5rem;
+            text-transform: uppercase;
+        }
+
+        /* 承接段落可以加引语风格 */
+        .opener {
+            font-size: 1.1rem;
+            background: #f1f4f8;
+            padding: 1.2rem 1.6rem;
+            border-radius: 12px;
+            margin: 1.8rem 0 2.2rem 0;
+            color: #1a283a;
+            border-left: 4px solid #8a9bb0;
+        }
+
+        /* 特点列表——温和卡片式 */
+        .feature-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin: 1.6rem 0 2.2rem 0;
+        }
+
+        .feature-item {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 1.2rem 1.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.04);
+            border: 1px solid #edf0f5;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .feature-item:hover {
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04), 0 1px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .feature-item strong {
+            display: block;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #1a2b3e;
+            margin-bottom: 0.25rem;
+        }
+
+        .feature-item span {
+            font-size: 0.95rem;
+            color: #3f4f62;
+        }
+
+        /* 链接样式：干净，不突兀 */
+        a {
+            color: #1f4d7a;
+            text-decoration: none;
+            border-bottom: 1px solid #cbd8e6;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        a:hover {
+            color: #0f3455;
+            border-bottom-color: #1f4d7a;
+        }
+
+        /* FAQ 摘要 (极简) */
+        .faq-block {
+            background: #f6f8fa;
+            border-radius: 14px;
+            padding: 1.4rem 1.6rem;
+            margin: 2.2rem 0 2rem 0;
+        }
+
+        .faq-block p {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+        }
+
+        .faq-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            color: #1d2e41;
+        }
+
+        .faq-a {
+            color: #3e4f62;
+            margin-top: 0.1rem;
+        }
+
+        /* 温和结尾区 */
+        .closing {
+            margin: 3rem 0 1.5rem 0;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e0e6ed;
+            font-size: 0.95rem;
+            color: #4c5d70;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e8ecf2;
+            margin: 2rem 0;
+        }
+
+        /* 响应式 */
+        @media (max-width: 480px) {
+            body {
+                padding: 1.4rem 0.8rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .opener {
+                padding: 1rem 1.2rem;
+                font-size: 1rem;
+            }
+            .feature-item {
+                padding: 1rem 1.2rem;
+            }
+            .faq-block {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- 开场短句 -->
+        <h1>华体会</h1>
+        <div class="hero-sub">稳定的服务界面 · 清晰的起点</div>
+
+        <!-- 承接段落：从入口和页面说明切入 -->
+        <p>
+            在众多线上服务平台中，一个可靠且直观的访问起点往往决定了后续体验的顺畅程度。
+            作为被持续使用的服务标识，<a href="https://portalsite-hth.com.cn">华体会</a> 始终将界面清晰与访问稳定放在首位。
+            无论是初次了解还是日常使用，用户都可以通过统一的服务入口获得一致的页面反馈。
+        </p>
+
+        <!-- 用引语式段落增强承接 -->
+        <div class="opener">
+            “判断一个平台是否成熟，可以看它的基础页面是否简洁、路径是否直接。”
+        </div>
+
+        <p>
+            基于这种理念，<a href="https://portalsite-hth.com.cn">华体会</a> 的页面结构围绕功能直达与信息透明展开。
+            从首页布局到内容分区，每个模块都经过克制设计，避免冗余干扰，让访问者能够快速定位自己需要的板块。
+        </p>
+
+        <!-- 特点列表（知识型描述，温和克制） -->
+        <h2>页面特征与设计思路</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <strong>稳定的访问入口</strong>
+                <span>服务域名保持长期可用，页面响应经过基础调优，减少意外中断或加载异常情况。</span>
+            </div>
+            <div class="feature-item">
+                <strong>克制的信息层级</strong>
+                <span>标题、正文、导航之间留有合理空白，视觉重心清晰，降低认知负担。</span>
+            </div>
+            <div class="feature-item">
+                <strong>内容引导而非堆砌</strong>
+                <span>每一个板块仅承载必要说明，避免过度营销或冗余文案，让用户自行判断下一步操作。</span>
+            </div>
+            <div class="feature-item">
+                <strong>适配常见终端</strong>
+                <span>页面采用窄正文与弹性布局，在桌面与移动设备上均可获得可读性良好的浏览体验。</span>
+            </div>
+        </div>
+
+        <!-- 场景说明：从页面说明角度展开 -->
+        <h3>常见的页面使用场景</h3>
+        <p>
+            当用户通过浏览器直接访问 <a href="https://portalsite-hth.com.cn">华体会</a> 时，呈现的是经过整理的功能索引与说明。
+            无论是寻找特定服务模块，还是确认当前平台状态，首页都承担着“锚点”角色。
+            在需要快速确认服务信息时，统一入口降低了记忆多个地址的麻烦。
+        </p>
+
+        <!-- FAQ 摘要（简短实用） -->
+        <div class="faq-block">
+            <p><span class="faq-q">Q：是否需要额外注册才能看到页面内容？</span><br>
+            <span class="faq-a">不需要。首页所有公开信息均可直接浏览，无需登录或验证。</span></p>
+            <p><span class="faq-q">Q：页面布局会频繁变动吗？</span><br>
+            <span class="faq-a">核心结构保持稳定，仅在必要时进行细微调整，以维持使用惯性。</span></p>
+        </div>
+
+        <!-- 温和结尾 -->
+        <div class="closing">
+            <p>从稳定的入口开始，每一次访问都基于清晰的信息呈现。如果希望进一步了解具体功能或最新动态，可以直接查阅页面内对应模块说明。</p>
+            <p>保持简洁，保持可靠——这是 <a href="https://portalsite-hth.com.cn">华体会</a> 页面设计始终坚持的方向。</p>
+        </div>
+
+        <!-- 低调分隔，无多余装饰 -->
+        <hr>
+        <p style="font-size: 0.8rem; color: #8a9aad; text-align: center; margin: 0;">页面说明 · 内容仅供参考</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>西甲直播 – 观赛知识与信息平台</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #faf7f2;
+            font-family: 'Georgia', 'Times New Roman', '宋体', serif;
+            color: #2d2a26;
+            line-height: 1.7;
+            padding: 1.5rem;
+        }
+        .page {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #fffdf9;
+            padding: 2.5rem 2rem;
+            border-radius: 18px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+        }
+        /* hero */
+        .hero {
+            text-align: center;
+            padding-bottom: 2.2rem;
+            border-bottom: 1px solid #ede6db;
+            margin-bottom: 2.5rem;
+        }
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #2a241f;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: #5a534c;
+            margin-top: 0.8rem;
+            max-width: 620px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero .tagline {
+            display: inline-block;
+            background: #ece4d9;
+            padding: 0.2rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            color: #3e3630;
+            margin-top: 1rem;
+        }
+        /* 板块通用 */
+        section {
+            margin-bottom: 2.6rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 450;
+            border-left: 4px solid #b59c85;
+            padding-left: 0.9rem;
+            margin-bottom: 1.2rem;
+            color: #2f2822;
+        }
+        p {
+            margin-bottom: 1.1rem;
+        }
+        /* 优势区：卡片 */
+        .advantage-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 1.8rem 0 0.8rem;
+        }
+        .advantage-card {
+            flex: 1 1 200px;
+            background: #f6f1ea;
+            padding: 1.2rem 1rem;
+            border-radius: 14px;
+            transition: background 0.15s;
+        }
+        .advantage-card h3 {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: #2d241f;
+        }
+        .advantage-card p {
+            font-size: 0.96rem;
+            color: #4d443c;
+            margin-top: 0.3rem;
+            margin-bottom: 0;
+        }
+        /* 引用块 / 提示框 */
+        .callout {
+            background: #f0ebe3;
+            border-left: 5px solid #b59c85;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 10px 10px 0;
+        }
+        .callout p {
+            margin-bottom: 0.3rem;
+        }
+        .callout strong {
+            color: #2d241f;
+        }
+        /* faq摘要 */
+        .faq-item {
+            padding: 0.9rem 0;
+            border-bottom: 1px dashed #ddd6cd;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-weight: 500;
+            color: #2f2822;
+        }
+        .faq-a {
+            margin-top: 0.3rem;
+            color: #4f453d;
+            font-size: 0.96rem;
+        }
+        /* 底部链接 */
+        .footer-links {
+            margin-top: 2.5rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e2d9cf;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+        .footer-links a {
+            color: #7a684f;
+            text-decoration: none;
+            border-bottom: 1px dotted #b59c85;
+            margin: 0 0.3rem;
+        }
+        .footer-links a:hover {
+            color: #3a2c1f;
+            border-bottom-style: solid;
+        }
+        /* 响应式 */
+        @media (max-width: 600px) {
+            body { padding: 0.8rem; }
+            .page { padding: 1.6rem 1.2rem; }
+            .hero h1 { font-size: 1.7rem; }
+            .advantage-card { flex: 1 1 100%; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- hero 区 -->
+    <div class="hero">
+        <h1>西甲联赛 · 赛程与观赛参考</h1>
+        <p>从赛季结构、球队动态到转播信息，提供一份清晰的观赛知识框架。适合日常查询与延伸阅读。</p>
+        <span class="tagline">⚽ 关注西甲，不止于比分</span>
+    </div>
+
+    <!-- 优势区：日常查询场景下的支撑信息 -->
+    <section>
+        <h2>为什么需要一份「比赛对照」视角</h2>
+        <p>看西甲不只是看一场90分钟的比赛。积分榜走势、伤停名单、历史交锋、主客场差异，每一条数据都可能影响你对局势的判断。把查询和对照当作习惯，会让观赛体验更完整。</p>
+        <div class="advantage-grid">
+            <div class="advantage-card">
+                <h3>赛程总览</h3>
+                <p>赛季跨度近十个月，每周都有多场对决。提前了解轮次与周中补赛安排，避免错过焦点战。</p>
+            </div>
+            <div class="advantage-card">
+                <h3>数据对照</h3>
+                <p>同一轮次不同场次之间、同一球队主客表现之间，都存在可比性。有意识地做横向对比，能发现更多战术脉络。</p>
+            </div>
+            <div class="advantage-card">
+                <h3>延伸阅读</h3>
+                <p>球队新闻、青训动态、教练战术解析——围绕西甲的信息生态非常丰富。多一个信息入口，就多一层理解。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 说明区：切入角度 + 如何利用平台 -->
+    <section>
+        <h2>如何利用信息平台做日常梳理</h2>
+        <p>你可以把<a href="https://migu-xijiazhibo.com">西甲直播</a>当作一个固定的信息起点：查看即将进行的比赛、回顾已结束场次的高光，并把赛前分析与赛后讨论结合起来。很多资深球迷的习惯是：先看赛程预告，再结合伤病和轮换信息做自己的预测笔记。</p>
+        <div class="callout">
+            <p><strong>💡 一个小建议：</strong> 每次比赛日之前，花三分钟浏览一下对阵双方的近期状态、交手记录和裁判安排。长期积累，你对联赛的理解会越来越立体。</p>
+        </div>
+        <p>此外，西甲的转播时间对中国球迷来说往往在深夜或凌晨。提前规划好观赛时间、利用回放功能补课，都是很实际的做法。不必追求每场都看，但看过的每一场都可以有收获。</p>
+    </section>
+
+    <!-- FAQ 摘要 -->
+    <section>
+        <h2>常见问题 · 摘要</h2>
+        <div class="faq-item">
+            <div class="faq-q">Q：西甲每个赛季有多少轮？</div>
+            <div class="faq-a">西甲共20支球队，双循环主客场，合计38轮。通常在8月中旬开赛，次年5月底或6月初结束。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Q：哪里可以查到准确的实时比分？</div>
+            <div class="faq-a">主流体育数据网站、联赛官方以及部分综合性直播平台都会提供实时比分。<a href="https://migu-xijiazhibo.com">西甲直播</a>页面也会同步更新比赛进程与积分变动。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Q：西甲有哪些德比或经典对决？</div>
+            <div class="faq-a">国家德比（皇马vs巴萨）、马德里德比、瓦伦西亚大区德比、巴斯克德比等。每场德比背后都有深厚的地域与历史背景，值得赛前查阅。</div>
+        </div>
+    </section>
+
+    <!-- 底部链接 -->
+    <div class="footer-links">
+        <p>如果你正在寻找一个集中的西甲信息源，可以试试<a href="https://migu-xijiazhibo.com">西甲直播</a>。页面保持更新，适合作为日常查询的参考标签。</p>
+        <p style="margin-top: 1rem; font-size: 0.88rem; color: #7d7267;">— 知识型观赛，从每一次查阅开始 —</p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>西甲直播 · 杂志专题 | La Liga 赛事</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f8f6f3;
+            color: #1e1e1e;
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+            line-height: 1.65;
+            letter-spacing: 0.01em;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 680px;
+            width: 100%;
+            padding: 2.8rem 1.5rem 3.5rem;
+            background: #f8f6f3;
+            box-shadow: none;
+        }
+
+        /* 首页横幅（hero） */
+        .hero {
+            margin-bottom: 3.2rem;
+            text-align: left;
+            border-bottom: 1px solid #d9d4ce;
+            padding-bottom: 2.2rem;
+        }
+
+        .hero-label {
+            display: inline-block;
+            font-size: 0.7rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #8b817a;
+            border: 1px solid #d0c9c2;
+            padding: 0.2rem 1rem;
+            margin-bottom: 1.6rem;
+            font-weight: 400;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 450;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            color: #1a1817;
+        }
+
+        .hero h1 small {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: 350;
+            color: #6b625c;
+            margin-top: 0.6rem;
+            letter-spacing: 0.02em;
+        }
+
+        .hero p {
+            margin-top: 1.2rem;
+            font-size: 0.95rem;
+            color: #4b4541;
+            max-width: 540px;
+        }
+
+        /* 章节 */
+        section {
+            margin-bottom: 2.8rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 420;
+            color: #2b2724;
+            margin-bottom: 0.9rem;
+            border-left: 3px solid #c7b9ae;
+            padding-left: 1rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #3f3a36;
+            margin: 1.6rem 0 0.6rem;
+        }
+
+        p {
+            font-size: 0.98rem;
+            margin-bottom: 1.1rem;
+            color: #2d2926;
+        }
+
+        .intro-text {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .accent-link {
+            color: #9f3e2c;
+            text-decoration: none;
+            border-bottom: 1px solid #dbb7ad;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .accent-link:hover {
+            color: #6f2b1d;
+            border-bottom-color: #8f5e51;
+        }
+
+        /* 卡片摘要 */
+        .feature-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+            margin: 1.4rem 0 0.2rem;
+        }
+
+        .feature-item {
+            background: #ffffffec;
+            padding: 1.2rem 1.4rem;
+            border-radius: 0;
+            border-left: 2px solid #d6cbc3;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+        }
+
+        .feature-item strong {
+            font-weight: 480;
+            color: #2f2a26;
+            display: inline-block;
+            margin-bottom: 0.2rem;
+        }
+
+        .feature-item p {
+            font-size: 0.92rem;
+            margin-bottom: 0;
+            color: #3d3733;
+        }
+
+        /* FAQ 摘要风格 */
+        .faq-compact {
+            margin: 1rem 0 0.2rem;
+            border-top: 1px solid #e2d9d2;
+            padding-top: 1.2rem;
+        }
+
+        .faq-q {
+            font-weight: 450;
+            color: #2a2522;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-a {
+            font-size: 0.92rem;
+            color: #4b4440;
+            margin-left: 1rem;
+            margin-bottom: 0.9rem;
+            padding-left: 0.2rem;
+            border-left: 1px solid #d6cbc3;
+            padding-left: 0.8rem;
+        }
+
+        /* 页尾 */
+        .footer-note {
+            margin-top: 3.5rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #d9d4ce;
+            font-size: 0.85rem;
+            color: #6a625c;
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 0.7rem;
+        }
+
+        .footer-note span {
+            opacity: 0.7;
+        }
+
+        .small-print {
+            font-size: 0.75rem;
+            color: #8c837c;
+            margin-top: 0.3rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 520px) {
+            .page {
+                padding: 1.8rem 1.2rem 2.8rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero h1 small {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            .feature-item {
+                padding: 1rem 1rem;
+            }
+
+            .faq-a {
+                margin-left: 0.5rem;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- 首页横幅 -->
+        <header class="hero">
+            <div class="hero-label">特写 · 西甲</div>
+            <h1>
+                赛场的另一种读法
+                <small>从转播画面到日常陪伴</small>
+            </h1>
+            <p>
+                每个周末，当裁判哨声在伊比利亚半岛响起，数以万计的屏幕同时亮起。
+                有人在意战术板上的数字，有人只为那一次不经意的脚后跟传球。
+                西甲从来不只是冠军的角逐，它更是一场持续九个月的叙事。
+            </p>
+        </header>
+
+        <!-- 背景说明 -->
+        <section>
+            <h2>为何是西甲</h2>
+            <p class="intro-text">
+                西班牙足球甲级联赛的历史里，有太多被反复讲述的名字：从五十年代的迪·斯蒂法诺，到后来细腻的中场编织者，再到如今遍布全世界的转播信号。
+                但真正让这项赛事与众不同的，或许是那种近乎偏执的技术表达——短传、跑位、一脚出球，这些刻在青训基因里的习惯，让一场普通的联赛也能溢出令人屏息的节奏。
+                即便你只是偶尔点开直播，也总能发现某个瞬间值得定格。
+            </p>
+            <p>
+                经过几十年的沉淀，西甲早已超出了地理边界。在亚洲的深夜、美洲的午后，不同时区的人通过屏幕共享同一片草皮的颤动。
+                这种联结不需要语言，一个进球后的庆祝动作就足够说明一切。
+            </p>
+        </section>
+
+        <!-- 三段自然介绍（杂志式叙述） -->
+        <section>
+            <h2>镜头之外的故事</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <strong>节奏 · 不只是控球率</strong>
+                    <p>
+                        西甲的比赛很少陷入死板的阵地战。即便是中下游球队，也敢于在三十米区域做连续的撞墙配合。
+                        这种对空间的拆解，让每个赛季都会诞生几个意想不到的战术亮点。看一场西甲直播，相当于上一堂即兴的足球美学课。
+                    </p>
+                </div>
+                <div class="feature-item">
+                    <strong>德比 · 城市与记忆</strong>
+                    <p>
+                        马德里的黄昏、巴塞罗那的海风、塞维利亚的四月节……德比日的氛围往往比结果更能留在心里。
+                        那些看台上挥舞的围巾、赛后久久不散的歌声，构成了联赛最柔软也最坚硬的内核。
+                    </p>
+                </div>
+                <div class="feature-item">
+                    <strong>新面孔 · 每一季的变量</strong>
+                    <p>
+                        每年夏天都有年轻球员从梯队站上舞台中央，也有人从其他联赛带着不同的风格加入。
+                        正是这些流动的血液，让西甲始终保有新鲜感——你永远不知道下一轮谁会突然闪光。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ 摘要风格 —— 两个常见疑问，自然引出链接 -->
+        <section>
+            <h2>几个朴素的问题</h2>
+            <div class="faq-compact">
+                <div class="faq-q">▸ 在哪里可以关注西甲赛事？</div>
+                <div class="faq-a">
+                    对于国内观众而言，<a href="https://zhcn-laliga.com" class="accent-link">西甲直播</a>是获取比赛信号、赛程与集锦的主要渠道之一。
+                    页面会随着赛季推进更新对阵时间，适合习惯提前规划观看日程的人。
+                </div>
+
+                <div class="faq-q">▸ 为什么西甲的比赛节奏常常偏快？</div>
+                <div class="faq-a">
+                    这植根于西班牙足球的青训理念：从小强调控球与无球跑动，球员在狭小空间内的处理球能力普遍较高。
+                    加上裁判对流畅性相对宽松的判罚尺度，使得攻防转换很少被中断，从而形成了独特的视觉节奏。
+                </div>
+            </div>
+        </section>
+
+        <!-- 页尾访问提示 -->
+        <footer class="footer-note">
+            <div>
+                <span>杂志专题 · 2025</span><br>
+                <span class="small-print">基于公开赛事资料与观察撰写</span>
+            </div>
+            <div>
+                <span>若想了解更多实时动态，可留意 <a href="https://zhcn-laliga.com" class="accent-link">西甲直播</a> 的赛程与回放</span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
